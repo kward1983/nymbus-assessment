@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Append Dev Log Entry on Stop",
+      "trigger": "Stop",
+      "action": {
+        "type": "agent",
+        "prompt": "Review the current conversation and append a new entry to docs/dev-log.md.\n\nThe entry must include:\n- Today's date and time as a markdown heading (format: ## YYYY-MM-DD HH:MM)\n- **Prompt:** The user's most recent message, quoted verbatim (or closely paraphrased if very long)\n- **Summary:** 1–2 sentences describing what was actually done or decided in this agent turn\n- **Outcome:** One of — Accepted, Modified, or Rejected — based on whether the result was taken as-is, changed during the turn, or not applied\n\nRules:\n- Do NOT use a template or placeholder text. Every field must reflect the real conversation.\n- Append to the end of docs/dev-log.md without modifying existing entries.\n- If docs/dev-log.md does not exist, create it first.\n- Use a blank line between the previous entry and the new one.\n- Keep the entry concise and factual."
+      }
+    }
+  ]
+}

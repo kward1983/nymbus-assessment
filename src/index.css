@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ui-primary: #2569EC;
+  --ui-black: #000714;
+  --ui-white: #FFFFFF;
+  --ui-trans: #FFFFFF00;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ui-black);
+  background-color: var(--ui-white);
+  margin: 0;
+}
